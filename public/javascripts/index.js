@@ -5,5 +5,8 @@ $(document).ready(function() {
       } else {
         $('.navbar').removeClass('scroll');
       }
-  })  
+  });
+  $('.menubtn').click(function() {
+    $('.navbar').toggleClass('active'); 
+  });
 });
