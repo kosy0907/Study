@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('.navbar').removeClass('scroll');
       }
   });
-  $('.menubtn').click(function() {
+  $('.menu-btn').click(function() {
     $('.navbar').toggleClass('active'); 
   });
 });
