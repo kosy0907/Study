@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url("../images/bg.jpg") no-repeat;
+  background: url("../images/black.png") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
@@ -102,6 +102,77 @@ body {
   font-weight: 600;
 }
 
+/* about */
+
+.about1 {
+  background-color: #fff;
+  padding: 5%;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.title-line {
+  width: 150px;
+  background-color: black;
+  border: none;
+}
+
+.about-content {
+  padding: 50px;
+}
+
+.contact-channel {
+  margin-top: 50px;
+}
+
+.skill-pre {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  text-align: center;
+}
+
+.skill-pre .card {
+  width: 20%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #222;
+}
+
+.skill-pre i {
+  margin: 20px 0;
+}
+
+.skill-pre .text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+#F-text {
+  color: rgb(88, 150, 175);
+}
+
+#B-text {
+  color: rgb(175, 173, 88);
+}
+
+#M-text {
+  color: rgb(98, 175, 88);
+}
+
+.skill-pre p {
+  font-size: 20px;
+  color: #fff;
+}
+
 /* responsive */
 @media screen and (max-width: 600px) {
   .navbar {
@@ -141,71 +212,13 @@ body {
   .navbar.active {
     top: 0%;
   }
-}
 
-/* about */
-.about {
-  background-color: #fff;
-  padding: 5%;
-}
+  .skill-pre {
+    display: block;
+  }
 
-.title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.title-line {
-  width: 150px;
-  background-color: black;
-  border: none;
-}
-
-.about-content {
-  padding: 50px;
-}
-
-.channel {
-  margin-top: 50px;
-}
-
-.skill-pre {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.card {
-  text-align: center;
-}
-
-.skill-pre .card {
-  width: 20%;
-  padding: 20px;
-}
-
-.skill-pre i {
-  margin: 20px 0;
-}
-
-.skill-pre .text {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-#F-text {
-  color: rgb(88, 150, 175);
-}
-
-#B-text {
-  color: rgb(175, 173, 88);
-}
-
-#M-text {
-  color: rgb(98, 175, 88);
-}
-
-.skill-pre p {
-  font-size: 20px;
+  .skill-pre .card {
+    width: 80%;
+    margin: 50px auto;
+  }
 }
