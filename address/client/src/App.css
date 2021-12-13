@@ -24,3 +24,13 @@
 .form p {
   margin: 0;
 }
+
+.card {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: floralwhite;
+  width: 30%;
+  height: 100px;
+  margin: 20px;
+  padding: 10px;
+}
