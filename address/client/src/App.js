@@ -8,6 +8,8 @@ function App() {
   const [address, setAddress] = useState();
   const [nameAdressList, setList] = useState([]);
 
+  const [newAddress, setNewAddress] = useState("");
+
   useEffect(() => {
     Axios.get('http://localhost:3001/api/get').then((response)=>{
       setList(response.data);
@@ -20,10 +22,27 @@ function App() {
       address: address,
     });
     window.alert('Success!');
+
     setList([
       ...nameAdressList,
       {name: name, address: address},
     ]);
+  };
+
+  const deleteAddress = (name) => {
+    Axios.delete(`http://localhost:3001/api/delete/${name}`);
+    window.alert('Delete!');
+    window.location.reload();
+  };
+
+  const updateAddress = (name) => {
+    Axios.put("http://localhost:3001/api/update", {
+      name: name, 
+      address: newAddress,
+    });
+    setNewAddress("");
+    window.alert('Updated!');
+    window.location.reload();
   };
 
   return (
@@ -63,10 +82,12 @@ function App() {
                   </Card.Text>
 
                   <InputGroup className="mb-3">
-                    <FormControl type="text" id="updateInput"/>
-                    <Button variant="outline-secondary" id="updateBtn">Update</Button>
+                    <FormControl type="text" id="updateInput" onChange={(e) => {
+                      setNewAddress(e.target.value)
+                    }}/>
+                    <Button variant="outline-secondary" id="updateBtn" onClick={() => {updateAddress(val.name)}}>Update</Button>
                   </InputGroup>
-                  <Button variant="outline-danger" size="sm">Delete</Button>
+                  <Button variant="outline-danger" size="sm" onClick={() => {deleteAddress(val.name)}}>Delete</Button>
 
                 </Card.Body>
               </Card>
