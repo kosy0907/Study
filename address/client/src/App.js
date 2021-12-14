@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Button, Card, Form, FormControl, InputGroup} from 'react-bootstrap';
 import './App.css';
 import Axios from 'axios';
 
@@ -18,7 +19,7 @@ function App() {
       name: name, 
       address: address,
     });
-      
+    window.alert('Success!');
     setList([
       ...nameAdressList,
       {name: name, address: address},
@@ -30,27 +31,49 @@ function App() {
       <h1>Address Book</h1>
 
       <div className='form'>
-        <label>Name</label>
-        <input type='text' name='name' onChange={(e)=> {
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" name='name' placeholder="Enter Name" 
+          onChange={(e)=> {
           setName(e.target.value);
-        }}/>
+          }}/>
+        </Form.Group>
 
-        <label>Address</label>
-        <p>ex) 010-xxxx-xxxx</p>
-        <input type='text' name='address' onChange={(e)=> {
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Address</Form.Label>
+          <Form.Control type="text" name='address' placeholder="Enter Address" 
+          onChange={(e)=> {
           setAddress(e.target.value);
-        }}/>
+          }}/>
+          <Form.Text className="text-muted">
+            ex) 010-xxxx-xxxx
+          </Form.Text>
+        </Form.Group>
 
-        <button onClick={submit}>Submit</button>
+        <Button variant='outline-primary' onClick={submit}>Submit</Button>
 
-        {nameAdressList.map((val) => {
-          return (
-            <div className="card">
-              <h2>{val.name}</h2>
-              <p>{val.address}</p>
-            </div>
-          )
-        })}
+        <div className="content">
+          {nameAdressList.map((val) => {
+            return (
+              <Card>
+                <Card.Header>{val.name}</Card.Header>
+                <Card.Body>
+                  <Card.Text>
+                    {val.address}
+                  </Card.Text>
+
+                  <InputGroup className="mb-3">
+                    <FormControl type="text" id="updateInput"/>
+                    <Button variant="outline-secondary" id="updateBtn">Update</Button>
+                  </InputGroup>
+                  <Button variant="outline-danger" size="sm">Delete</Button>
+
+                </Card.Body>
+              </Card>
+            )
+          })}
+        </div>
+
       </div>
     </div>
   );
