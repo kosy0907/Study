@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Router
+SPA(Single Page Application)  
+- 새로운 페이지를 로드하지 않고 필요한 데이터만 가져와 렌더링 하는 방식
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 목록
+---
+* Install
+* Example
 
-## Available Scripts
+### Install
+---
+1. 설치
+```
+npm i react-router-dom
+```
 
-In the project directory, you can run:
+2. src/App.js 상단에 코드 추가
+```js
+import { BrowserRouter, Route } from 'react-router-dom';
+```
 
-### `npm start`
+3. 새로운 페이지 생성 
+```js
+// src/pages/About.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+import React from "react";
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+function About() {
+  return (
+    <div>This is About page.</div>
+  );
+}
 
-### `npm test`
+export default About;
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. 렌더링 코드 추가
+```js
+// <Route> 코드는 반드시 <BrowserRouter> 안에서 실행
 
-### `npm run build`
+<Router>
+    <Route path="/about" element={<About />} />
+</Router>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Example
+---
+Link Component 사용
+```js
+// src/App.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<Router>
+    <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/profile">Profile</Link>
+    </nav>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/profile/:username" element={<Profile />} />
+        <Route path="*" element={<Error /> } />
+    </Routes>
+    <div> Footer </div>
+</Router>
+```
