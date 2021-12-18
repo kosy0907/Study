@@ -7,3 +7,4 @@
 * props
 * state
 * styled component
+* Event handling
