@@ -43,7 +43,7 @@ export default About;
 </Router>
 ```
 
-### Example
+### Example1
 ---
 Link Component 사용
 ```js
@@ -56,11 +56,26 @@ Link Component 사용
         <Link to="/profile">Profile</Link>
     </nav>
     <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/profile/:username" element={<Profile />} />
         <Route path="*" element={<Error /> } />
     </Routes>
     <div> Footer </div>
+</Router>
+```
+
+### Example2
+---
+**React router dom v6에서 Switch => Routes로 대체**  
+**component => element로 변경**  
+Switch
+* 첫번째로 매칭되는 path를 가진 Component 렌더링
+* 매칭되는 path가 없으면 마지막에 Page Not Found 페이지를 보여줄 수 있음
+```js
+<Router>
+  <Switch>
+    <Route path="/profile/:username" element={<Profile />} />
+  </Switch>
 </Router>
 ```
