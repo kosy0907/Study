@@ -1,5 +1,5 @@
 # React Test Repository
-리액트 공부 중 test 목적으로 생성
+리액트 공부 중 test용
 
 ## 목록
 * eslint-test
@@ -8,3 +8,4 @@
 * state
 * styled component
 * Event handling
+* hooks

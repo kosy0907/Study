@@ -1,0 +1,16 @@
+div {
+  margin: 20px 0 10px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 40%;
+}
+
+form label {
+  margin-top: 10px;
+}
