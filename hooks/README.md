@@ -1,6 +1,6 @@
 # Hooks
-클래스형 컴포넌트에서만 사용 가능했던 state와 lifecycle을 함수형 컴포넌트에서도 사용 가능하게 함  
-
+함수형 컴포넌트에서 state와 lifecycle을 사용 가능하게 함  
+내장된 hook 또는 사용자 정의 hook를 사용
 ## 목록
 * UseState
 * UseEffect
@@ -111,7 +111,9 @@ import React, { useEffect } from 'react';
         console.log(name);
     }, [name]);
     ```
-    2-3. Clean up -> 언마운트 전 / 업데이트 직전에 작업 수행
+    2-3. Clean up  
+        정리하는 함수  
+        언마운트 전 / 업데이트 직전에 작업 수행
     ```js
     useEffect(() => {
         console.log('effect');
@@ -131,3 +133,28 @@ import React, { useEffect } from 'react';
 2. Example
 ```js
 ``` -->
+### Custom Hook
+* use로 시작하는 JS 함수  
+* 조건부 함수가 아니다
+* 반복되는 로직을 쉽게 재사용 가능하게 한다  
+* 다른 hook을 호출할 수 있다
+```js
+// src/hooks/useWindowHeight.js
+export default function useWindowHeight() {
+    const [height, setHeight] = useState(window.innerHeight);
+
+    useEffect(() => {
+        const resize = () => {
+            setHeight(window.innerHeight);
+        };
+
+        window.addEventListener('resize', resize);
+
+        return () => {
+            window.removeEventListener('resize', resize);
+        };
+    }, []);
+
+    return height;
+}
+```
