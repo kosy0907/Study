@@ -1,5 +1,5 @@
 div {
-  margin: 20px 0 10px 0;
+  margin: 10px 0;
 }
 
 form {
@@ -12,5 +12,5 @@ form input {
 }
 
 form label {
-  margin-top: 10px;
+  margin: 10px 0;
 }
