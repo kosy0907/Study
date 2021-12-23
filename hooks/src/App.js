@@ -4,6 +4,7 @@ import useWindowHeight from './hooks/useWindowHeight';
 import Profile from './hooks/Profile';
 import UseReducerEx from './hooks/UseReducerEx';
 import UseMemoEx from './hooks/UseMemoEx';
+import UseRefEx from './hooks/UseRefEx';
 
 function App() {
   const height = useWindowHeight();
@@ -26,8 +27,12 @@ function App() {
       <UseReducerEx />
       <hr />
 
-      <b>UseMemo Example</b>
+      <b>UseMemo & useCallback Example</b>
       <UseMemoEx />
+      <hr />
+
+      <b>UseRef Example</b>
+      <UseRefEx />
     </div>
   );
 }

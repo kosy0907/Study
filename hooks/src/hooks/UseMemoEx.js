@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 
 function sum(people) {
     console.log('sum');
@@ -17,10 +17,16 @@ export default function UseMemoEx() {
         return sum(people);
     }, [people]);
 
+    // 최초에만 수행
+    const click = useCallback(() => {
+        console.log(value);
+    }, []);
+
     return (
         <div>
             <input value={value} onChange={change} />
             <p>{count}</p>
+            <button onClick={click}>Click</button>
         </div>
     );
 

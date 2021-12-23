@@ -255,6 +255,36 @@ export default function useWindowHeight() {
     }
     ```
 ### useCallback
+---
 * 특정한 함수를 재사용 하기 위함
+```js
+    // 최초에만 수행
+    const click = useCallback(() => {
+        console.log(value);
+    }, []);
+    
+    ...
+
+    <button onClick={click}>Click</button>
+```
 ### useRef
 ---
+* React에서 특정 DOM을 선택할 때는 ref를 사용
+* 함수형 컴포넌트에서 ref 사용시 useRef를 사용
+* 인자로 넘어온 초기값을 .current에 저장
+* Ref 객체의 current -> 선택하고자 하는 DOM
+1. 기본 형태
+    ```js
+    const refObject = useRef( initialValue );
+    ```
+2. Example
+    ```js
+    const input1Ref = createRef();
+    const input2Ref = useRef();
+
+    ...
+
+    <input value={value} onChange={change} />
+    <input ref={input1Ref} />
+    <input ref={input2Ref} />
+    ```
