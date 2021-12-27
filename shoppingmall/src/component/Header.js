@@ -1,11 +1,15 @@
 import { Navbar } from 'react-bootstrap';
+import { BsCart4 } from 'react-icons/bs';
 
 export default function Header() {
     return (
         <header>
             <Navbar bg="dark" variant="dark">
                 <div className="container-fluid">
-                    <Navbar.Brand href="#home">Little Cart</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <BsCart4 />
+                        Little Cart
+                    </Navbar.Brand>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Search</button>

@@ -7,6 +7,10 @@ body {
     padding: 0 3rem;
 }
 
+.navbar-brand svg {
+    margin-right: 1rem;
+}
+
 a {
     font-weight: bold;
     text-decoration: none;
@@ -16,6 +20,7 @@ a {
 .card {
     max-width: 15rem !important;
     margin-bottom: 2rem;
+    box-shadow: 1px 1px 5px gray;
 }
 
 .row {
@@ -33,7 +38,8 @@ a {
 }
 
 .block {
-    background-color: rgb(204, 204, 204);
+    border: 1px solid gainsboro;
+    border-radius: 5px;
     padding: 1.5rem;
     margin: 0.5rem;
 }
