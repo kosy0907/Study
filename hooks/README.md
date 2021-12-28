@@ -4,7 +4,6 @@
 ## 목록
 * useState
 * useEffect
-* useContext
 * custom hook
 * useReducer
 * useMemo
@@ -130,14 +129,6 @@ const Profile = () => {
     });
     ```
 
-<!-- ### UseContext
----
-1. Import
-```js
-```
-2. Example
-```js
-``` -->
 ### Custom Hook
 ---
 * use로 시작하는 JS 함수  

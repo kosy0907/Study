@@ -25,3 +25,4 @@ React.js Test
 * testing library
     * describe & it
     * test
+* map function
