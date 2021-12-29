@@ -26,3 +26,7 @@ React.js Test
     * describe & it
     * test
 * map function
+* redux
+    * Action
+    * Reducer
+    * Store
