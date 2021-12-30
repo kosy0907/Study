@@ -14,6 +14,7 @@ Action 객체를 Reducer에 전달하고 Reducer가 Store의 상태 업데이트
     * redux-thunk
     * redux-promise-middleware
     * Ducks Pattern
+* Example
 
 ## Install
 ```
@@ -55,17 +56,24 @@ function addTodo(data) {
 * Store의 상태를 업데이트
 ```js
 // 변화된 상태값 반환
-function reducer(state, action) {
+function reducer(previousState, action) {
   ...
   return alteredState;
 }
 ```
+#### Combine Reducer
+---
+컴포넌트 별로 리듀서를 작성시 결합할 때 사용
 
 ### Store
 ---
 * 컴포넌트 외부에 있는 저장소로, 컴포넌트에서 상태 정보가 필요할때 스토어에 접근
 * 상태가 관리되는 공간
 * 하나의 프로젝트는 하나의 스토어만 갖는다
+#### 스토어 Create Function
+```js
+ const store = createStore(reducer)
+```
 #### 내장 함수
 1. Dispatch
     * 액션을 발생시키는 이벤트 트리거 역할
@@ -74,3 +82,27 @@ function reducer(state, action) {
     * 이벤트 리스너 역할
 3. Selector
     * 상태 값을 가져올 때 사용
+
+## Advanced
+### Async action
+---
+
+### Middleware
+---
+
+### redux-devtool
+---
+
+### redux-thunk
+---
+
+### redux-promise-middleware
+---
+
+### Ducks Pattern
+---
+
+## Example
+```js
+
+```
