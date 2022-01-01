@@ -1,0 +1,80 @@
+body {
+  background-color: rgb(180, 180, 180);
+}
+
+.card {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 7rem auto;
+  text-align: center;
+  width: 70%;
+  min-height: 300px;
+  height: fit-content;
+  box-shadow: 0 4px 8px rgba(87, 87, 87, 0.23);
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.card .head {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px 10px 0 0;
+}
+
+.card h1 {
+  color: whitesmoke;
+  margin: 0;
+}
+
+.card .form {
+  margin: 2rem 16rem;
+  display: flex;
+}
+
+.card input {
+  flex: 1;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.card button {
+  border: none;
+  background: none;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  cursor: pointer;
+}
+
+.addBtn svg {
+  width: 2rem;
+  height: 100%;
+}
+
+.updateBtn svg, .deleteBtn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.card .addBtn svg :hover {
+  fill: rgb(84, 81, 248);
+}
+
+.updateBtn svg :hover {
+  fill: green;
+}
+
+.deleteBtn svg :hover {
+  fill: indianred;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.row div {
+  padding: 0 10px;
+}
