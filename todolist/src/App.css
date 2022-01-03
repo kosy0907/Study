@@ -9,7 +9,7 @@ h1 {
 .card {
   background-color: white;
   border: 1px solid gray;
-  border-radius: 10px;
+  border-radius: 1rem !important;
   margin: 7rem auto;
   text-align: center;
   width: 70%;
@@ -23,7 +23,7 @@ h1 {
 
 .card .head {
   background-color: rgb(0, 0, 0);
-  border-radius: 10px 10px 0 0;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .card h1 {
@@ -42,36 +42,31 @@ h1 {
   border-radius: 0.5rem;
 }
 
-.card button {
-  border: none;
+.container {
+  margin: 5rem;
+}
+
+.row {
+  margin: 2rem;
+  min-height: 3.5rem;
+}
+
+.addBtn {
+  border: gray;
+  padding-left: 0;
+}
+
+.deleteBtn {
   background: none;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
   cursor: pointer;
+  border: none;
 }
 
-.addBtn svg {
-  width: 2rem;
-  height: 100%;
-}
-
-.updateBtn svg, .deleteBtn svg {
+.deleteBtn svg {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.card .addBtn svg :hover {
-  fill: rgb(84, 81, 248);
-}
-
-.updateBtn svg :hover {
-  fill: green;
-}
-
 .deleteBtn svg :hover {
   fill: indianred;
-}
-
-h4 {
-  margin-bottom: 0 !important;
 }
