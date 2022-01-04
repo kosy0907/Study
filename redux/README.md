@@ -10,7 +10,6 @@ Action 객체를 Reducer에 전달하고 Reducer가 Store의 상태 업데이트
 * Advanced
     * async action
     * middleware
-    * redux-devtool
     * redux-thunk
     * redux-promise-middleware
     * Ducks Pattern
@@ -90,9 +89,6 @@ function reducer(previousState, action) {
 ### Middleware
 ---
 
-### redux-devtool
----
-
 ### redux-thunk
 ---
 
@@ -101,8 +97,48 @@ function reducer(previousState, action) {
 
 ### Ducks Pattern
 ---
-
-## Example
+* Action type, Action create function, reducer를 별도의 파일이 아닌 하나의 module처럼 한 파일 안에 작성
+* Reducer 함수, Action 함수는 반드시 **default export** 해야 한다
+* Action type은 반드시 **접두사**를 붙인 형태로 정의
 ```js
+// src/module/counter.js
+// Action type - 접두사를 붙임
+const SET_DIFF =  'counter/SET_DIFF';
+const INCREASE = 'counter/INCREASE';
+const DECREASE = 'counter/DECREASE';
+
+// 초기 상태
+const initialState = {
+  number: 0,
+  diff: 1,
+};
+
+// Action 생성 함수
+export const setDiff = diff => ({ type: SET_DIFF, diff });
+export const increase = () => ({ type: INCREASE });
+export const decrease = () => ({ type: DECREASE });
+
+// Reducer
+export default function counter(state = initialState, action) {
+  switch (action.type) {
+    case SET_DIFF:
+      return {
+        ...state,
+        diff: action.diff,
+      };
+    case INCREASE:
+      return {
+        ...state,
+        number: state.number + state.diff,
+      };
+    case DECREASE:
+      return {
+        ...state,
+        number: state.number - state.diff,
+      };
+    default:
+      return state;
+  }
+}
 
 ```
