@@ -88,6 +88,35 @@ function reducer(previousState, action) {
 
 ### Middleware
 ---
+* Action - Reducer 사이의 중간자
+* Dispatch 앞/뒤에 코드 추가
+* 여러 개인 경우 순차적으로 실행
+* 전달받은 액션을 console에 출력하거나 액션을 취소/추가하는 등 다양한 역할
+#### 기본구조
+```js
+const loggerMiddleware = store => next => action => {
+  ...
+}
+
+export default loggerMiddleware;
+```
+#### Example
+```js
+function middleware1(store) {
+  console.log("middleware0", 0);
+  return(next) => {
+    console.log("middleware1", 1);
+    return action => {
+      console.log('middleware2', 2);
+      const returnValue = next(action);
+      console.log('middleware3', 3);
+      return returnValue;
+    }
+  }
+}
+
+export default loggerMiddleware;
+```
 
 ### redux-thunk
 ---
