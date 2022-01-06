@@ -120,6 +120,29 @@ export default loggerMiddleware;
 
 ### redux-thunk
 ---
+* Action 객체가 아닌 함수를 Dispatch 가능
+* 비동기 작업 처리 시 가장 많이 사용
+* Action 내부에서 여러가지 작업을 처리할 수 있게 함
+```js
+// Action Dispatch를 1초 뒤로 미루는 함수
+const LATER_WORK = 'LATER_WORK';
+
+function work() {
+  return {
+    type: LATER_WORK
+  };
+}
+
+function workAsync() {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(work());
+    }, 1000);
+  };
+}
+
+// store.dispatch(workAsync()) 호출 시 Action이 1초 후에 Dispatch
+```
 
 ### redux-promise-middleware
 ---
