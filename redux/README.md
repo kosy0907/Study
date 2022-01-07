@@ -131,7 +131,7 @@ function work() {
   return {
     type: LATER_WORK
   };
-}
+} 
 
 function workAsync() {
   return dispatch => {
