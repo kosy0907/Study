@@ -8,7 +8,6 @@ Action 객체를 Reducer에 전달하고 Reducer가 Store의 상태 업데이트
     * Reducer
     * Store
 * Advanced
-    * async action
     * middleware
     * redux-thunk
     * redux-promise-middleware
@@ -83,9 +82,6 @@ function reducer(previousState, action) {
     * 상태 값을 가져올 때 사용
 
 ## Advanced
-### Async action
----
-
 ### Middleware
 ---
 * Action - Reducer 사이의 중간자
@@ -146,6 +142,108 @@ function workAsync() {
 
 ### redux-promise-middleware
 ---
+* Promise 기반의 비동기 작업을 편하게 하는 미들웨어
+* 어떤 API 호출이건 최소 3가지의 Action을 보내야 함
+  1. 요청이 시작됨을 알림
+  2. 요청이 성공적으로 완료됨을 알림
+  3. 요청이 실패했음을 알림
+* 요청이 시작/성공/실패 시 액션의 뒷부분에 각각 _PENDING, _FULFILED, _REJECTED 반환(커스터마이징 가능)
+* Store의 applyMiddleware() 안에 promise를 넣어 연결
+* 비동기 작업 함수를 Action Creator에서 Action 객체 형태로 리턴
+1. 설치
+    ```
+    npm i redux-promise-middleware
+    ```
+2. import
+    ```js
+    // store.js
+    import promiseMiddleware from 'redux-promise-middleware';
+
+    const store = createStore(
+      reducer,
+      composeWithDevTools(applyMiddleware(promise))
+    );
+    ```
+3. Action Creator 설정
+    ```js
+    // actions.js
+    import axios from 'axios';
+
+    const GET_USERS = 'GET_USERS';
+
+    export const GET_USERS_PENDING = 'GET_USERS_PENDING';
+    export const GET_USERS_FULFILLED = 'GET_USERS_FULFILLED';
+    export const GET_USERS_REJECTED = 'GET_USERS_REJECTED';
+
+    export function getUsersPromise() {
+    return {
+      type: GET_USERS,
+      payload: async () => {
+        const res = await axios.get('https://api.github.com/users');
+        return res.data;
+      },
+    };
+    }
+    ```
+4. Reducer 설정
+    ```js
+    import {  GET_USERS_PENDING, GET_USERS_FULFILLED, GET_USERS_REJECTED  } from '../actions';
+
+    // 초기 상태
+    const initialState = {
+    loading: false,
+    data: [],
+    error: null,
+    };
+
+    export default function user(state = initialState, action) {
+
+      if (action.type === GET_USERS_PENDING) {
+        return {
+          ...state,
+          laoding: true,
+          error: null,
+        };
+      }
+      if (action.type === GET_USERS_FULFILLED) {
+        return {
+          ...state,
+          laoding: false,
+          data: action.payload,
+        };
+      }
+      if (action.type === GET_USERS_REJECTED) {
+        return {
+          ...state,
+          laoding: false,
+          error: action.payload,
+        };
+      }
+    return state;
+    }
+    ```
+5. Component 설정
+    ```js
+    import axios from 'axios';
+    import { useCallback } from 'react';
+    import { useDispatch, useSelector } from 'react-redux';
+    import UserList from '../components/UserList';
+    import {
+    getUsersPromise,
+    } from '../redux/actions';
+
+    export default function UserListContainer() {
+      const users = useSelector((state) => state.users.data);
+      const dispatch = useDispatch();
+
+      const getUsers = useCallback(() => {
+        // getUserPropmise로 비동기 처리 수행
+        dispatch(getUsersPromise());
+      }, [dispatch]);
+
+    return <UserList users={users} getUsers={getUsers} />;
+    }
+    ```
 
 ### Ducks Pattern
 ---
