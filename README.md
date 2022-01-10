@@ -15,8 +15,10 @@
   * Github: https://github.com/kosy0907/ReactStudy/tree/main/shoppingmall
   * 참고 자료: https://www.youtube.com/watch?v=AmIdY1Eb8tY
 * Todo List
-  * 2022.1.1 ~ 
-  * Github:
+  * 2022.1.1 ~ 2022.1.3
+  * Github: https://github.com/kosy0907/ReactStudy/tree/main/todolist
   * 참고 자료: 
-* Library
-  * 2021.1.
+* Movie-review
+  * 2021.1.9 ~ 2022.
+  * Github: 
+  * 참고 자료: 
