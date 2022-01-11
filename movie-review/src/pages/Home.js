@@ -1,9 +1,13 @@
 import React from "react";
+import Movie from "./Movie";
 
-export default function Home() {
+export default function Home(props) {
+    const { movies } = props;
     return (
         <div>
-            Home
+            {movies.map((movie) => (
+                <Movie key={movie.id} movie={movie} />
+            ))}
         </div>
     );
 }
