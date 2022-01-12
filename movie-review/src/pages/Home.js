@@ -4,9 +4,9 @@ import Movie from "./Movie";
 export default function Home(props) {
     const { movies } = props;
     return (
-        <div>
+        <div className="container">
             {movies.map((movie) => (
-                <Movie key={movie.id} movie={movie} />
+                <Movie key={movie.imdbID} movie={movie} />
             ))}
         </div>
     );
