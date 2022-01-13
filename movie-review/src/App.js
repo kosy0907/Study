@@ -1,9 +1,10 @@
 import './App.css';
 import { React, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Detail from './pages/Detail';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -27,9 +28,9 @@ function App() {
       {loading ? "Loading..." :
         <Router>
           <Routes>
-            <Route path='/login' element={<Login />} />
+            <Route exact path='/login' element={<Login />} />
             <Route exact path='/' element={<Home movies={movies} />} />
-            {/* <Route path='/detail' element={<Detail /> } /> */}
+            <Route exact path='/movie/:movieId' element={<Detail movies={movies} />} />
           </Routes>
         </Router>
       }
