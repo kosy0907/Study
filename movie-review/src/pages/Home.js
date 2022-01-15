@@ -4,6 +4,7 @@ import NavBar from "./section/NavBar";
 
 export default function Home(props) {
     const { movies } = props;
+
     return (
         <>
             <NavBar />
