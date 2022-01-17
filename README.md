@@ -30,3 +30,4 @@ React.js Test
     * Action
     * Reducer
     * Store
+* Login Test
