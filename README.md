@@ -30,4 +30,4 @@ React.js Test
     * Action
     * Reducer
     * Store
-* Login Test
+* Login Test(with firebase)
