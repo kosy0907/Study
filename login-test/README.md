@@ -7,9 +7,12 @@ Firebase를 활용한 로그인 데모
 4. firebase 설치
     ```js
     npm i firebase
+    // or
+    yarn add firebase
     ```
 5. firebase.js 작성
     ```js
+    // .env 파일로 가져올 수 있음
     import firebase from 'firebase/compat/app';
     import 'firebase/compat/auth';
     import 'firebase/compat/firestore';
