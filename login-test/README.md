@@ -4,13 +4,14 @@ Firebase를 활용한 로그인 데모
 1. FireBase(https://console.firebase.google.com/) Project 생성
 2. React App 생성
 3. Project에 내 앱 생성
-4. firebase 설치
+4. Authentication 설정
+5. firebase 설치
     ```js
     npm i firebase
     // or
     yarn add firebase
     ```
-5. firebase.js 작성
+6. firebase.js 작성
     ```js
     // .env 파일로 가져올 수 있음
     import firebase from 'firebase/compat/app';
@@ -32,18 +33,20 @@ Firebase를 활용한 로그인 데모
     export { auth };
     export default db;
     ```
-6. firebase import
+7. firebase import
     ```js
     import { auth } from '../firebase';
     ```
-7. Login, SignUp, SignOut Function 작성
+8. Login, SignUp, SignOut Function 작성
     ```js
     //Login
+    // 로그인 함수
     export default function Login() {
         const emailRef = useRef(null);
         const passwordRef = useRef(null);
         const signIn = e => {
             e.preventDefault();
+            // Email과 PW로 로그인
             auth.signInWithEmailAndPassword(
                 emailRef.current.value,
                 passwordRef.current.value
@@ -64,6 +67,7 @@ Firebase를 활용한 로그인 데모
         const passwordRef = useRef(null);
         const signUp = e => {
             e.preventDefault();
+            // Email과 PW로 계정 생성
             auth.createUserWithEmailAndPassword(
                 emailRef.current.value,
                 passwordRef.current.value
