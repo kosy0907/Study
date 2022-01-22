@@ -40,7 +40,7 @@ Firebase를 활용한 로그인 데모
 8. Login, SignUp, SignOut Function 작성
     ```js
     //Login
-    // 로그인 함수
+    //로그인 함수
     export default function Login() {
         const emailRef = useRef(null);
         const passwordRef = useRef(null);
@@ -62,6 +62,7 @@ Firebase를 활용한 로그인 데모
     ```
     ```js
     //SignUp
+    //회원가입 함수
     export default function SignUp() {
         const emailRef = useRef(null);
         const passwordRef = useRef(null);
@@ -83,5 +84,6 @@ Firebase를 활용한 로그인 데모
     ```
     ```js
     //SignOut
+    //로그아웃 함수
     <button onClick={() => auth.signOut()}>SignOut<button>
     ```
