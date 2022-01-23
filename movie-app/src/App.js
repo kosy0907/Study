@@ -25,7 +25,6 @@ function App() {
   return (
     <div>
       {loading ? "Loading..." :
-
         <Router>
           <Routes>
             <Route exact path='/login' element={<Login />} />
