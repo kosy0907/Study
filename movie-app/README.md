@@ -11,9 +11,9 @@
 * Login
     * Firebase 기반 Email & PW 로그인
 * Home
-    * 최근 인기 영화 Title, Rating    
+    * 최근 인기 영화 Title, Rating  
 * movie detail
-    * Home에서 선택한 영화의 상세 정보
+    * Home에서 선택한 영화의 상세 info
 
 ## 기능
 * 최근 인기 있는 영화 확인
