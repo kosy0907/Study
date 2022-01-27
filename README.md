@@ -17,8 +17,8 @@
 * Todo List
   * 2022.1.1 ~ 2022.1.3
   * Github: https://github.com/kosy0907/ReactStudy/tree/main/todolist
-  * 참고 자료: 
+  * 참고 자료: https://www.youtube.com/watch?v=5EA721DKOzQ
 * Movie-app
   * 2021.1.9 ~ 2022.1.16
   * Github: https://github.com/kosy0907/ReactStudy/tree/main/movie-app
-  * 참고 자료: 
+  * 참고 자료: https://www.youtube.com/watch?v=sZ0bZGfg_m4
