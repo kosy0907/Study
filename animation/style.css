@@ -1,0 +1,33 @@
+div {
+    width: 200px;
+    height: 200px;
+    margin: 5%;
+}
+
+.animation1 {
+    background-color: aquamarine;
+}
+
+.animation1 :hover {
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+}
+
+.animation2 {
+    background-color: blueviolet;
+}
+
+.animation3 {
+    background-color: indianred;
+}
+
+@keyframes moving {
+    from { margin-left: 5%; }
+    to { margin-left: 20%;}
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
