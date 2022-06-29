@@ -19,7 +19,7 @@ div {
 }
 
 .animation2:hover {
-    background-color: #e0f050;
+    background-color: #34f304;
     -webkit-transform:rotate(180deg);
     transform:rotate(180deg);
 }
