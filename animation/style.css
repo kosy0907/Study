@@ -13,7 +13,7 @@ div {
 }
 
 .animation2 {
-    background-color: blueviolet;
+    background-color: rgb(104, 24, 179);
     -webkit-transition: background-color 2s, -webkit-transform 1s;
     transition: background-color 2s, transform 1s;
 }
