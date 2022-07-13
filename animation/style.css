@@ -38,6 +38,6 @@ div {
 }
 
 @keyframes fadeout {
-    from { opacity: 1; margin-left: 5%; }
+    from { opacity: 1; margin-left: 10%; }
     to { opacity: 0; margin-left: 20%;}
 }
