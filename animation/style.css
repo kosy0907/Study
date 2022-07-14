@@ -1,7 +1,7 @@
 div {
     width: 250px;
     height: 250px;
-    margin: 5%;
+    margin: 10%;
 }
 
 .animation1 {
@@ -33,7 +33,7 @@ div {
 }
 
 @keyframes moving {
-    from { margin-left: 5%; }
+    from { margin-left: 10%; }
     to { margin-left: 50%;}
 }
 
