@@ -34,7 +34,7 @@ div {
 
 @keyframes moving {
     from { margin-left: 10%; }
-    to { margin-left: 50%;}
+    to { margin-left: 60%;}
 }
 
 @keyframes fadeout {
