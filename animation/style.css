@@ -7,7 +7,7 @@ div {
 .animation1 {
     background-color: rgb(88, 224, 179);
     animation-name: moving;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-direction: alternate;
     animation-iteration-count: 3;
 }
@@ -19,7 +19,7 @@ div {
 }
 
 .animation2:hover {
-    background-color: #135a01;
+    background-color: #103108;
     -webkit-transform:rotate(180deg);
     transform:rotate(180deg);
 }
