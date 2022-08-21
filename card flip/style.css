@@ -45,7 +45,7 @@ body {
   
 .card-back {
     background-color: #303030;
-    color: white;
+    color: rgb(253, 253, 253);
     transform: rotateY(180deg);
   }
 
