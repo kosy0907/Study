@@ -1,0 +1,32 @@
+.sec2 {
+    margin: 15rem auto;
+}
+
+.sec2-content {
+    margin-top: 7rem;
+}
+
+.sec2-item p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.sec2-item-title {
+    margin-bottom: 1rem;
+}
+
+.sec2-item-title p {
+    font-weight: 700 !important;
+}
+
+.sec2-item {
+    margin: 0 0 3rem;
+}
+
+.sec2-item .contact-sub {
+    width: 4rem;
+}
+
+.adr {
+    display: flex;
+}

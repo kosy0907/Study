@@ -1,0 +1,38 @@
+.nav {
+    width: 100%;
+    height: 143px;
+    padding: 0 23rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    background-color: #0E0612;;
+}
+
+.inner-left {
+    width: 19.5%;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.inner-right {
+    right: 3rem;
+}
+
+button {
+    width: 60px;
+    color: #a5a5a5;
+    background: none;
+    border: none;
+    font-family: 'Rajdhani';
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #FFFFFF;
+}

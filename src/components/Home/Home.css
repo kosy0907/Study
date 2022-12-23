@@ -1,0 +1,13 @@
+body {
+    background-color: #0E0612;
+    position: relative;
+}
+
+.left-nav {
+    width: 3rem;
+    height: 100vh;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 0;
+    top: 0;
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+.App {
+  font-family: 'Rajdhani';
+  color:#FFFFFF
+}
+
+body {
+  padding-top: 14rem;
+  margin: 0;
+}
+
+.sec1, .sec2, .sec3 {
+  width: 60%;
+}
+
+.sec2, .sec3 {
+  margin: 15rem auto;
+}
+
+.sec2-title p, .sec3-title p {
+  width: 20%;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.sec2-title, .sec3-title {
+  display: flex;
+  align-items: center;
+}
+
+.sec2 hr, .sec3 hr {
+  margin: 0;
+  width: 80%;
+  padding: 0;
+}
