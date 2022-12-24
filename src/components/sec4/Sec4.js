@@ -1,13 +1,12 @@
 import React from 'react';
-import './Sec3.css';
 
-export default function Sec3() {
+export default function Sec4() {
     return (
         <>
-            <div className='sec3' id='wrap3'>
+            <div className='sec4'>
                 <div className='wrap'>
-                    <div className='sec3-title'>
-                        <p>Skill</p>
+                    <div className='sec4-title'>
+                        <p>Project</p>
                         <hr />
                     </div>
                 </div>

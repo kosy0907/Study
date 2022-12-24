@@ -8,7 +8,7 @@
     box-sizing: border-box;
     position: fixed;
     top: 0;
-    background-color: #0E0612;;
+    background: none;
 }
 
 .inner-left {
@@ -24,7 +24,7 @@
 
 button {
     width: 60px;
-    color: #a5a5a5;
+    color: #a7a7a7;
     background: none;
     border: none;
     font-family: 'Rajdhani';
