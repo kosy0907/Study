@@ -5,7 +5,7 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 export default function Sec1() {
     return (
         <>
-            <div className='sec1'>
+            <div className='sec1' id='section1'>
                 <div className='wrap' id='wrap1'>
                     <div className='sec1-left'>
                         <div className='title'>

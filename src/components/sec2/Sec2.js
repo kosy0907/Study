@@ -4,14 +4,13 @@ import './Sec2.css';
 export default function Sec2() {
     return (
         <>
-            <div className='sec2'>
+            <div className='sec2' id='section2'>
                 <div className='wrap' id='wrap2'>
                     <div className='sec2-title'>
                         <p>About</p>
                         <hr />
                     </div>
                     <div className='sec2-content'>
-
                         <div id='sec2-name' className='sec2-item'>
                             <div className='sec2-item-title'>
                                 <p>Name</p>

@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
 .App {
   font-family: 'Rajdhani';
-  color:#FFFFFF;
-  background-color: #0E0612;
 }
 
 html {
@@ -13,6 +11,9 @@ body {
   margin: 0;
   overflow-y: hidden;
   height: 100%;
+
+  color: #1a202c;
+  transition: color 0.2s ease-in;
 }
 
 .divider {
@@ -42,22 +43,6 @@ body {
   box-sizing:border-box;
   padding-top: 15rem;
 }
-
-/* .sec1 {
-  background: linear-gradient(#bfd2d9, #86abc2);
-}
-
-.sec2 {
-  background: linear-gradient(#86abc2, #4e7fa2);
-}
-
-.sec3 {
-  background: linear-gradient(#4e7fa2, #004868);
-}
-
-.sec4 {
-  background: linear-gradient(#004868, #0f2a47);
-} */
 
 .sec2, .sec3, .sec4 {
   padding-top: 10rem;

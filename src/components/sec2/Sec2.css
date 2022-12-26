@@ -1,5 +1,8 @@
 .sec2-content {
-    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
 .sec2-item p {
@@ -16,7 +19,7 @@
 }
 
 .sec2-item {
-    margin: 0 0 3rem;
+    margin: 2.5rem 0;
 }
 
 .sec2-item .contact-sub {
