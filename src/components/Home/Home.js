@@ -1,7 +1,6 @@
 import React from 'react';
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 import './Home.css'
-import Navbar from '../Navbar/Navbar';
 import Sec1 from '../sec1/Sec1';
 import Sec2 from '../sec2/Sec2';
 import Sec3 from '../sec3/Sec3';
@@ -9,12 +8,16 @@ import Sec4 from '../sec4/Sec4';
 
 export default function Home() {
     const [activeIndex, setActiveIndex] = useState(1);
-    const handleClick = (index) => setActiveIndex(index);
+    const [fadeIndex, setFadeIndex] = useState(1);
+    const handleClick = (index) => {
+        setActiveIndex(index);
+        setFadeIndex(index);
+    };
     const checkActive = (index, className) => activeIndex === index ? className : "";
+    const fadeIn = (index, className) => fadeIndex === index ? className : "";
 
     return (
         <>
-            {/* <Navbar /> */}
             <div className='nav'>
                 <div className='nav-inner'>
                     <div className='logo'>LOGO</div>
@@ -46,10 +49,10 @@ export default function Home() {
             </div>
 
             <div className='content'>
-                <div className={`panel ${checkActive(1, "active")}`}><Sec1 /></div>
-                <div className={`panel ${checkActive(2, "active")}`}><Sec2 /></div>
-                <div className={`panel ${checkActive(3, "active")}`}><Sec3 /></div>
-                <div className={`panel ${checkActive(4, "active")}`}><Sec4 /></div>
+                <div className={`panel ${checkActive(1, "active")} ${fadeIn(1, "fade-in")}`}><Sec1 /></div>
+                <div className={`panel ${checkActive(2, "active")} ${fadeIn(2, "fade-in")}`}><Sec2 /></div>
+                <div className={`panel ${checkActive(3, "active")} ${fadeIn(3, "fade-in")}`}><Sec3 /></div>
+                <div className={`panel ${checkActive(4, "active")} ${fadeIn(4, "fade-in")}`}><Sec4 /></div>
             </div>
         </>
     )
