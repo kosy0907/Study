@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.messageForm {
+  margin-top: 30px;
+}
+
+.messageForm label {
+  margin: 0 10px 0 30px;
+}
