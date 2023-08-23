@@ -4,10 +4,20 @@
         <meta charset="UTF-8">
         <title>layout3</title>
         <style>
-
+            body { background: rgb(210, 238, 229); }
+            #wrap { width: 1000px; height: 1000px; margin: 0 auto; text-align: center; color: #fff; font-size: 24px; }
+            #side {width: 300px; height: 1000px; line-height: 1000px; background: rgb(3, 73, 50); float: left; }
+            #header { width: 700px; height: 200px; line-height: 200px; background: rgb(8, 104, 72); float: left; }
+            #contents { width: 700px; height: 600px; line-height: 600px; background: rgb(91, 179, 149); float: left; }
+            #footer { width: 700px; height: 200px; line-height: 200px; background: rgb(144, 209, 188); float: left; }
         </style>
     </head>
     <body>
-
+        <div id="wrap">
+            <div id="side">SIDE</div>
+            <div id="header">HEADER</div>
+            <div id="contents">CONTENTS</div>
+            <div id="footer">FOOTER</div>
+        </div>
     </body>
 </html>
