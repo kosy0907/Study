@@ -1,0 +1,43 @@
+div {
+    width: 220px;
+    height: 220px;
+    margin: 10%;
+}
+
+.animation1 {
+    background-color: rgb(88, 224, 179);
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: 7;
+}
+
+.animation2 {
+    background-color: rgb(86, 21, 146);
+    -webkit-transition: background-color 2s, -webkit-transform 3s;
+    transition: background-color 2s, transform 3s;
+}
+
+.animation2:hover {
+    background-color: #103108;
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+
+.animation3 {
+    background-color: indianred;
+    animation-name: fadeout;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes moving {
+    from { margin-left: 10%; }
+    to { margin-left: 60%;}
+}
+
+@keyframes fadeout {
+    from { opacity: 1; margin-left: 10%; }
+    to { opacity: 0; margin-left: 20%;}
+}

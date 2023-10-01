@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+}
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.first {
+    background-color: aliceblue;
+}
+.second {
+    background-color: aquamarine;
+}
+.third {
+    background-color: blueviolet;
+}
