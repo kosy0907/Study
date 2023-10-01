@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;600&display=swap');
+
+* {
+  text-decoration: none;
+}
+
+body {
+  background: url("../images/black.png") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+.max {
+  width: 100%;
+}
+
+/*navbar*/
+.navbar {
+  position: fixed;
+  font-family: 'Asap', sans-serif;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.navbar .max {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .menu {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.navbar .menu li {
+  display: inline-block;
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+.navbar .menu li a {
+  transition: color 0.2s ease;
+}
+
+.navbar .menu li a:hover {
+  color: cadetblue;
+}
+
+.navbar a {
+  color:azure;
+}
+
+.navbar.scroll{
+  background: rgb(135, 189, 159, 0.5);
+}
+
+/* menubtn */
+.menu-btn {
+  font-size: 24px;
+  color: azure;
+  cursor: pointer;
+  display: none;
+}
+
+/*Home*/
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  height: 50vh;
+}
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-content .imgbox {
+  width: 120px;
+  height: 120px; 
+  border: 3px solid cadetblue;
+  border-radius: 80%;
+  overflow: hidden;
+}
+
+.imgbox .profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name, .job {
+  color: azure;
+}
+
+.name {
+  font: 20px 'Asap', sans-serif;
+  font-weight: 600;
+}
+
+/* about */
+.about1 {
+  background-color: #fff;
+  padding: 5%;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.title-line {
+  width: 150px;
+  background-color: black;
+  border: none;
+}
+
+.about-content {
+  padding: 50px;
+}
+
+.contact-channel {
+  margin-top: 50px;
+}
+
+.skill-pre {
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  text-align: center;
+}
+
+.skill-pre .card {
+  width: 20%;
+  padding: 5%;
+  border-radius: 5px;
+  background-color: #222;
+}
+
+.skill-pre i {
+  margin: 20px 0;
+}
+
+.skill-pre .text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+#F-text, #skill-f {
+  color: rgb(88, 150, 175);
+}
+
+#B-text, #skill-b {
+  color: rgb(175, 173, 88);
+}
+
+#M-text, #skill-m {
+  color: rgb(98, 175, 88);
+}
+
+.skill-pre p {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* skill */
+.skill {
+  background-color: #fff;
+  padding: 5%;
+}
+
+.skill-card {
+  margin: 5%;
+  padding: 5%;
+  background-color: #222;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.skill-cat {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .navbar {
+    top: -100%;
+  }
+
+  .navbar .max {
+    text-align: center;
+  }
+
+  .navbar .menu {
+    display: block;
+    margin-top: 0;
+    padding-top: 70px;
+    background-color: rgb(0, 0, 0, 0.85);
+    width: 100%;
+    height: 45vh;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+  }
+
+  .navbar .menu-btn {
+    display: block;
+    z-index: 999;
+    position: fixed;
+    top: 20px;
+    right: 40px;
+  }
+
+  .navbar.active {
+    top: 0%;
+  }
+
+  .skill-pre {
+    display: block;
+  }
+
+  .skill-pre .card {
+    width: 80%;
+    margin: 50px auto;
+  }
+}
