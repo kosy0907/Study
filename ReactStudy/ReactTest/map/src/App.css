@@ -1,0 +1,30 @@
+.container {
+  background-color: rgb(221, 221, 221);
+  padding: 3rem;
+  border: 1px solid slategrey;
+  border-radius: 5px;
+  margin-top: 3rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+.row * {
+  width: fit-content !important;
+}
+
+.title, .writer {
+  width: 30% !important;
+  text-align: center;
+}
+
+.Button {
+  width: 10% !important;
+}
+
+.h2 {
+  font-weight: 900 !important;
+}

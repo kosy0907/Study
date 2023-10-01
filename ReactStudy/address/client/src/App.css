@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  padding: 20px
+}
+
+.form p {
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 40%;
+  height: fit-content;
+  margin: 20px 10px;
+}
+
+.input-group {
+  margin-top: 20px;
+}
+
+#updateInput {
+  height: auto;
+}
+
+#updateBtn {
+  margin: 0;
+}
