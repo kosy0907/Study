@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import './App.css';
 import Counter from './hooks/Counter';
 import useWindowHeight from './hooks/useWindowHeight';
@@ -5,9 +6,13 @@ import Profile from './hooks/Profile';
 import UseReducerEx from './hooks/UseReducerEx';
 import UseMemoEx from './hooks/UseMemoEx';
 import UseRefEx from './hooks/UseRefEx';
+import { ThemeContext } from "./hooks/UseContext/ThemeContext";
+import Page from "./hooks/UseContext/Page";
+
 
 function App() {
   const height = useWindowHeight();
+  const [isDark, setIsDark] = useState(false);
 
   return (
     <div className="App">
@@ -33,6 +38,11 @@ function App() {
 
       <b>UseRef Example</b>
       <UseRefEx />
+
+      <b>UseContext Example</b>
+      <ThemeContext.Provider value={{ isDark, setIsDark }}>
+        <Page />
+      </ThemeContext.Provider>
     </div>
   );
 }
